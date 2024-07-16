@@ -29,28 +29,36 @@
     ```
 
 ## Install using the ```apt``` repository
-```shell
-# update Server
-sudo apt update -y
 
-# install prerequisite packages for Docker to run
-sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-
-# pull down docker gpg key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-# verify its configuration
-sudo apt-key fingerprint 0EBFCD88
-
-# add the Docker Repository
-sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-# update server again
-sudo apt update
-
-# install necessary packages
-sudo apt install docker-ce docker-ce-cli containerd.io
-
-# add user to the Docker Group
-sudo usermod ubuntu -aG docker
-```
+1. update Server
+    ```shell
+    sudo apt update -y
+    ```
+2. install prerequisite packages for Docker to run
+    ```shell
+    sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    ```
+3. pull down docker gpg key
+    ```shell
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    ```
+4. verify its configuration
+    ```shell
+    sudo apt-key fingerprint 0EBFCD88
+    ```
+5. add the Docker Repository
+    ```shell
+    sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    ```
+6. update server again
+    ```shell
+    sudo apt update
+    ```
+7. install necessary packages
+    ```shell
+    sudo apt install docker-ce docker-ce-cli containerd.io
+    ```
+8. add user to the Docker Group
+    ```shell
+    sudo usermod ubuntu -aG docker
+    ```
